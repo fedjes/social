@@ -49,7 +49,7 @@ let store = {
     subscribe  (observer)  {
         this._callSubscribe = observer;
     },
-
+/*
     addPost (postMessage) {
         let newPost = {
             id: 5,
@@ -64,7 +64,7 @@ let store = {
 
         this._state.profilePage.newPostText = newText;
         this._callSubscribe(this._state);
-    },
+    },*/
 
     dispatch(action) {
     if (action.type === 'ADD-POST') {
