@@ -8,10 +8,10 @@ import Profile from './components/Profile/Profile';
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
-import {BrowserRouter, Route} from "react-router-dom";
+import { Route} from "react-router-dom";
 
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-//yeap
+
 
 
 

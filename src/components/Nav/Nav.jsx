@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
 import Friends from "../SiteBar/SiteBar";
-import state from "../../Redux/State";
+import state from "../../Redux/store";
 
 
 const Nav = (props) => {

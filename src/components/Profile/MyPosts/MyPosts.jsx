@@ -5,7 +5,6 @@ import s from './MyPosts.module.css';
 
 
 
-
 const MyPosts = (props) => {
 
     let postsElements = props.posts.map(p => <Post message={p.message} like={p.like}/> )

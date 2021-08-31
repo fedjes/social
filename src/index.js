@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import store from './Redux/State';
+import store from './Redux/redux-store';
 
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
@@ -13,7 +13,8 @@ import {Provider} from "react-redux";
 
 
 
-let rerenderTrea = (state) => {
+
+let rerenderTrea = () => {
 
 ReactDOM.render(
     <React.StrictMode>
@@ -24,10 +25,14 @@ ReactDOM.render(
         </BrowserRouter>
     </React.StrictMode>, document.getElementById('root'));
 
-}
+};
+rerenderTrea();
 
-rerenderTrea(store.getState());
-store.subscribe(rerenderTrea);
+store.subscribe(() => {
+
+    rerenderTrea();
+});
+
 /*ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
