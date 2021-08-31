@@ -14,8 +14,6 @@ import {Provider} from "react-redux";
 
 
 
-let rerenderTrea = () => {
-
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
@@ -25,13 +23,8 @@ ReactDOM.render(
         </BrowserRouter>
     </React.StrictMode>, document.getElementById('root'));
 
-};
-rerenderTrea();
 
-store.subscribe(() => {
 
-    rerenderTrea();
-});
 
 /*ReactDOM.render(
     <React.StrictMode>
