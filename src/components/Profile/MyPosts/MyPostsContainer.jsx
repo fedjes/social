@@ -9,7 +9,7 @@ import {connect, } from "react-redux";
 const mapMyStateToProps = (state) => {
         return {
                 posts: state.profilePage.posts,
-                //newPostText: state.profilePage.newPostText
+                newPostText: state.profilePage.newPostText
                 }
     };
 const mapMyDispatchToProps = (dispatch) => {
