@@ -11,6 +11,7 @@ import Settings from './components/Settings/Settings';
 import { Route} from "react-router-dom";
 
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 
 
@@ -28,6 +29,7 @@ const App = (props) => {
                     <Route path="/Settings" component={Settings}/>*/}
 
                     <Route path="/Profile" render={ ()=> <Profile />} />
+                    <Route path="/Users" render={ ()=> <UsersContainer />} />
 
                     <Route path="/Dialogs" render={ ()=> <DialogsContainer />} />
                     <Route path="/News" render={ ()=> <News />} />
