@@ -3,7 +3,7 @@ const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS ='SET_USERS';
 
 let initialState = {
-    users: []
+    users: [ ]
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -11,7 +11,7 @@ const usersReducer = (state = initialState, action) => {
         case FOLLOW:
             return {
                 ...state,
-                users:state.users.map( u => {
+                users: state.users.map( u => {
                     if (u.id === action.userId) {
                         return {...u, followed: true}
                     }
@@ -30,8 +30,9 @@ const usersReducer = (state = initialState, action) => {
                 })
             };
 
-        case SET_USERS:
+        case SET_USERS: {
             return {...state, users: [...state.users, ...action.users]};
+        }
         default:
             return state;
     }
