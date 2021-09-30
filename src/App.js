@@ -1,10 +1,8 @@
 // import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+
 import Nav from './components/Nav/Nav';
-
-
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
@@ -13,6 +11,7 @@ import { Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 
 
@@ -22,16 +21,10 @@ import ProfileContainer from "./components/Profile/ProfileContainer";
 const App = (props) => {
     return (
             <div className='app_Wrapper'>
-                <Header />
+                <HeaderContainer />
                 <Nav /> {/*state ={props.state.sitebarPage}*/}
                 <div className ='app-wrapper-content'>
-                  {/*  <Route path="/Profile" component={Profile}/>
-                    <Route path="/Dialogs" component={Dialogs}/>
-                    <Route path="/News" component={News}/>
-                    <Route path="/Music" component={Music}/>
-                    <Route path="/Settings" component={Settings}/>*/}
-
-                    <Route path="/Profile" render={ ()=> <ProfileContainer />} />
+                    <Route path="/Profile/:userId?" render={ ()=> <ProfileContainer />} />
                     <Route path="/Users" render={ ()=> <UsersContainer />} />
 
                     <Route path="/Dialogs" render={ ()=> <DialogsContainer />} />
