@@ -1,7 +1,5 @@
 const SET_USER_DATA = 'SET_USER_DATA';
 
-
-
 let initialState = {
     id: null,
     // isFetching: true,
@@ -18,7 +16,6 @@ const authReducer = (state = initialState, action) => {
                 ...action.data,
                 isAuth: true
                 }
-
         default:
             return state;
     }
